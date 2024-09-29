@@ -1,3 +1,9 @@
+# Created by https://www.toptal.com/developers/gitignore/api/venv
+# Edit at https://www.toptal.com/developers/gitignore?templates=venv
+
+### venv ###
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
 .Python
 [Bb]in
 [Ii]nclude
@@ -8,20 +14,7 @@
 pyvenv.cfg
 .venv
 pip-selfcheck.json
-*.pending-snap
-debug/
-target/
-target-alpine/
-/bin/
-**/*.rs.bk
-*.pdb
-__pycache__
-*.so
-*.pyd
-*.dll
-flamegraph.svg
-perf.data
-perf.data.old
-profile.json
-/site
-**/.DS_Store
+
+# End of https://www.toptal.com/developers/gitignore/api/venv
+
+# Generated using ignr.py - github.com/Antrikshy/ignr.py
