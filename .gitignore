@@ -1,20 +1,15 @@
-# Created by https://www.toptal.com/developers/gitignore/api/venv
-# Edit at https://www.toptal.com/developers/gitignore?templates=venv
+.venv/
 
-### venv ###
-# Virtualenv
-# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
-.Python
-[Bb]in
-[Ii]nclude
-[Ll]ib
-[Ll]ib64
-[Ll]ocal
-[Ss]cripts
-pyvenv.cfg
-.venv
-pip-selfcheck.json
+*.pyc
+__pycache__/
 
-# End of https://www.toptal.com/developers/gitignore/api/venv
+instance/
 
-# Generated using ignr.py - github.com/Antrikshy/ignr.py
+.pytest_cache/
+.coverage
+htmlcov/
+
+dist/
+build/
+*.egg-info/
+.ruff_cache
