@@ -19,16 +19,19 @@ def close_database(e=None):
     if database is not None:
         database.close()
 
+
 def init_database():
     database = open_database()
 
     with current_app.open_resource("schema.sql") as file:
         database.executescript(file.read().decode("utf-8"))
 
+
 @click.command("init-database")
 def init_database_command():
     init_database()
     click.echo("Initialized the database.")
+
 
 def init_app(app):
     app.teardown_appcontext(close_database)

@@ -1,9 +1,10 @@
 import os
-
+from .database import database
+from .auth import auth
 from flask import Flask
 
 
-def create_app(test_config=None):
+def create_app(test_config=None, database=database, auth=auth):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
         SECRET_KEY="dev",
@@ -24,7 +25,7 @@ def create_app(test_config=None):
     def home():
         return "Home Works!"
 
-    from . import database
     database.init_app(app)
+    app.register_blueprint(auth.blueprint)
 
     return app
